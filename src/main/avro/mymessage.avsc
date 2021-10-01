@@ -1,0 +1,15 @@
+{
+  "namespace": "com.santander.developergames.redcatopensphere.quarkuseda.model",
+  "type": "record",
+  "name": "MyMessage",
+  "fields": [
+    {
+      "name": "key",
+      "type": "string"
+    },
+    {
+      "name": "value",
+      "type": "string"
+    }
+  ]
+}
