@@ -9,13 +9,12 @@ import javax.ws.rs.core.Response;
 
 import com.santander.developergames.redcatopensphere.quarkuseda.model.MyMessage;
 
-
 import io.smallrye.mutiny.Multi;
-import io.smallrye.reactive.messaging.annotations.Channel;
-import io.smallrye.reactive.messaging.annotations.Emitter;
-import org.jboss.logging.Logger;
 
-@Path("")
+import org.eclipse.microprofile.reactive.messaging.Channel;
+import org.eclipse.microprofile.reactive.messaging.Emitter;
+import org.jboss.logging.Logger;
+@Path("api")
 public class EdaResource {
 
     private static final Logger LOGGER = Logger.getLogger(EdaResource.class);
@@ -27,9 +26,10 @@ public class EdaResource {
     Multi<MyMessage> messages;
 
     @GET
+    @Path("")
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return "Hello RESTEasy Reactive";
+        return "Hello RESTEasy Reactive. Use /topic endpoints with get or post to read or write messages";
     }
 
     @GET
