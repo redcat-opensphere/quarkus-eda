@@ -35,7 +35,10 @@ public class EdaResource {
     @Path("")
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return "Hello RESTEasy Reactive. Use /topic endpoints with get or post to read or write messages";
+        return "RESTEasy Reactive API. Use /topic endpoints with POST, GET or DELETE to write, read or clear messages\n\n" +
+        "Send a message: curl -X POST http://quarkus-eda-user7-quarkus-eda.apps.cluster-gbsmc.gbsmc.sandbox13.opentlc.com/api/topic -H 'Content-Type: application/json' -d '{\"key\":\"mensaje1\",\"value\":\"Hello World\"}'\n" +
+        "Read all messages: curl -X GET http://quarkus-eda-user7-quarkus-eda.apps.cluster-gbsmc.gbsmc.sandbox13.opentlc.com/api/topic -H 'Accept: application/json'\n"+
+        "Clear all messages: curl -X DELETE http://quarkus-eda-user7-quarkus-eda.apps.cluster-gbsmc.gbsmc.sandbox13.opentlc.com/api/topic -H 'Accept: application/json'\n";
     }
 
     @GET
