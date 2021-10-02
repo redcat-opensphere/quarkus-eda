@@ -11,3 +11,5 @@ Use /api/topic endpoints with POST, GET or DELETE to write, read or clear messag
 - Read all messages: ```curl -X GET http://quarkus-eda-user7-quarkus-eda.apps.cluster-gbsmc.gbsmc.sandbox13.opentlc.com/api/topic -H 'Accept: application/json'```
 - Clear all messages: ```curl -X DELETE http://quarkus-eda-user7-quarkus-eda.apps.cluster-gbsmc.gbsmc.sandbox13.opentlc.com/api/topic -H 'Accept: application/json'```
     }
+
+{http://quarkus-eda-user7-quarkus-eda.apps.cluster-gbsmc.gbsmc.sandbox13.opentlc.com/api/topic}
