@@ -17,6 +17,8 @@
     <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
     <quarkus.platform.version>2.2.3.Final</quarkus.platform.version>
     <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
+    <quarkus.package.type>native</quarkus.package.type>
+    <quarkus.native.additional-build-args>-J-Xmx6G</quarkus.native.additional-build-args>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -136,7 +138,7 @@
                   <goal>verify</goal>
                 </goals>
                 <configuration>
-                  <additionalBuildArgs>-J-Xmx4G</additionalBuildArgs>
+                  <additionalBuildArgs>-J-Xmx6G</additionalBuildArgs>
                   <systemPropertyVariables>
                     <native.image.path>${project.build.directory}/${project.build.finalName}-runner</native.image.path>
                     <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
